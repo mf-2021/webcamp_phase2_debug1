@@ -135,3 +135,258 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.1ms)
 
 
+  [1m[36mBook Destroy (12.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+Started GET "/books" for 122.24.184.49 at 2021-05-31 09:24:10 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/_form.html.erb (5.1ms)
+  Rendered books/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 283ms (Views: 272.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mBook Destroy (8.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+Started POST "/books" for 122.24.184.49 at 2021-05-31 09:34:23 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FvM4h4vV6vRBljopMkeWr5OsXEtIbuzCaU5wZsy6X7SDIpAAd-JJb4odp3AMFYn3dxY6EeWVTWLoPwtAhcO8Tg", "book"=>{"title"=>"リーダブルコード", "body"=>"面白い本です。"}, "commit"=>"Create Book"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:12
+  [1m[36mBook Create (2.9ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "面白い本です。"], ["created_at", "2021-05-31 09:34:23.186051"], ["updated_at", "2021-05-31 09:34:23.186051"], ["title", "リーダブルコード"]]
+  ↳ app/controllers/books_controller.rb:12
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:12
+Redirected to https://dc579108e382429387ebca3bb8b178d5.vfs.cloud9.ap-northeast-1.amazonaws.com/books/3
+Completed 302 Found in 31ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/books/3" for 122.24.184.49 at 2021-05-31 09:34:23 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 326ms (Views: 315.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 122.24.184.49 at 2021-05-31 09:34:26 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/_form.html.erb (6.6ms)
+  Rendered books/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/books" for 122.24.184.49 at 2021-05-31 09:34:35 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CjWX7qm1cEGvOiICO6zLe2_Rk3EnLxmTp6lTvtL-ySmFtx9EOADM8nQJIpyL7PUZU77lF7a_z8H-37f7w7SR9Q", "book"=>{"title"=>"トラブル知らずのシステム設計", "body"=>"難しい本です。"}, "commit"=>"Create Book"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:12
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("body", "created_at", "updated_at", "title") VALUES (?, ?, ?, ?)[0m  [["body", "難しい本です。"], ["created_at", "2021-05-31 09:34:35.479924"], ["updated_at", "2021-05-31 09:34:35.479924"], ["title", "トラブル知らずのシステム設計"]]
+  ↳ app/controllers/books_controller.rb:12
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:12
+Redirected to https://dc579108e382429387ebca3bb8b178d5.vfs.cloud9.ap-northeast-1.amazonaws.com/books/4
+Completed 302 Found in 11ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/books/4" for 122.24.184.49 at 2021-05-31 09:34:35 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:22
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBook Destroy (12.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.0ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.9ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.0ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.0ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.0ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+Started GET "/books" for 122.24.184.49 at 2021-05-31 11:22:06 +0000
+Cannot render console from 122.24.184.49! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  [1m[36mBook Destroy (15.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/_form.html.erb (39.5ms)
+  Rendered books/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 357ms (Views: 325.9ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mBook Destroy (10.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.6ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.6ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.6ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (13.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (7.6ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (14.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (11.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (11.0ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (11.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.7ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.9ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (11.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.9ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.1ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.6ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (9.8ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (8.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.2ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (6.3ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.4ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (5.6ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
+  [1m[36mBook Destroy (10.5ms)[0m  [1m[31mDELETE FROM "books"[0m
+  ↳ app/lib/batch/data_reset.rb:4
